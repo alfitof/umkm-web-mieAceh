@@ -1,0 +1,70 @@
+@import './variable';
+
+body {
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: $dark;
+}
+
+nav li:last-child a {
+  background: $merah;
+}
+nav li:last-child a:hover {
+  background: $primary;
+}
+
+nav li a {
+  transition: $smooth;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.bakso {
+  width: 42%;
+}
+
+section.hero {
+  background: $secondary;
+  padding-top: 2.6rem;
+  padding-bottom: 2.6rem;
+}
+
+section .tombol {
+  margin-top: 11px;
+  width: 100px;
+  transition: $smooth;
+  background: $merah;
+  &:hover {
+    background: $primary;
+  }
+}
+
+.size {
+  background: $secondary;
+}
+
+.add-to-cart {
+  border: 2px solid $merah;
+  color: $merah;
+  transition: $smooth;
+  &:hover {
+    background: $merah;
+    color: $pure;
+  }
+}
+
+.gambar-mie {
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  &:hover {
+    transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+  }
+}

@@ -1,0 +1,69 @@
+body {
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #232323;
+}
+
+nav li:last-child a {
+  background: #7a261a;
+}
+
+nav li:last-child a:hover {
+  background: #fe5f1e;
+}
+
+nav li a {
+  transition: all 0.3s ease-in-out;
+}
+nav li a:hover {
+  color: #fe5f1e;
+}
+
+.bakso {
+  width: 42%;
+}
+
+section.hero {
+  background: #f8f8f8;
+  padding-top: 2.6rem;
+  padding-bottom: 2.6rem;
+}
+
+section .tombol {
+  margin-top: 11px;
+  width: 100px;
+  transition: all 0.3s ease-in-out;
+  background: #7a261a;
+}
+section .tombol:hover {
+  background: #fe5f1e;
+}
+
+.size {
+  background: #f8f8f8;
+}
+
+.add-to-cart {
+  border: 2px solid #7a261a;
+  color: #7a261a;
+  transition: all 0.3s ease-in-out;
+}
+.add-to-cart:hover {
+  background: #7a261a;
+  color: #fff;
+}
+
+.gambar-mie {
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+}
+.gambar-mie:hover {
+  transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+}
