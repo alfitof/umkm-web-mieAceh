@@ -23,6 +23,14 @@ nav li a:hover {
   width: 42%;
 }
 
+.comp-login {
+  color: #7a261a;
+}
+
+.comp-login2 {
+  background: #7a261a;
+}
+
 section.hero {
   background: #f8f8f8;
   padding-top: 2.6rem;
@@ -66,4 +74,37 @@ section .tombol:hover {
   -webkit-transform: scale(1.25);
   -o-transform: scale(1.25);
   -ms-transform: scale(1.25);
+}
+
+h1 .emoji {
+  display: inline-block;
+  width: 40px;
+  margin-bottom: 6px;
+  margin-left: 3px;
+}
+
+section.cart {
+  background: #f8f8f8;
+}
+section.cart .amount {
+  color: #7a261a;
+}
+section.cart .cart1 {
+  color: #7a261a;
+}
+section.cart .mie-list .harga {
+  color: #7a261a;
+}
+
+.tombol-cart {
+  transition: all 0.3s ease-in-out;
+  background: #7a261a;
+}
+.tombol-cart:hover {
+  background: #fe5f1e;
+}
+
+section.login {
+  background: #f8f8f8;
+  height: 610px;
 }
