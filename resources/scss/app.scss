@@ -22,6 +22,13 @@ nav li a {
   }
 }
 
+.btn-login-daftar {
+  transition: $smooth;
+  &:hover {
+    background: $primary;
+  }
+}
+
 .bakso {
   width: 39%;
 }

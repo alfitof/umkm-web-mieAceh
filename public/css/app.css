@@ -296,6 +296,13 @@ nav li a:hover {
   color: #fe5f1e;
 }
 
+.btn-login-daftar {
+  transition: all 0.3s ease-in-out;
+}
+.btn-login-daftar:hover {
+  background: #fe5f1e;
+}
+
 .bakso {
   width: 39%;
 }

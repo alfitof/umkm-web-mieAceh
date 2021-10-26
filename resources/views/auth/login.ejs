@@ -3,7 +3,10 @@
     <div class="flex flex-col w-full md:w-1/2">
       <div class="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32" style="padding-bottom: 10px">
         <p class="comp-login text-3xl text-center">Masuk</p>
-        <form class="flex flex-col pt-3 md:pt-8">
+        <form action="/login" method="POST" class="flex flex-col pt-3 md:pt-8">
+          <% if(messages.error) { %>
+          <span class="text-red-500 text-sm"><%= messages.error%></span>
+          <% } %>
           <div class="flex flex-col pt-4">
             <div class="flex relative">
               <span class="inline-flex items-center px-3 border-t bg-white border-l border-b border-gray-300 text-gray-500 shadow-sm text-sm">
@@ -14,6 +17,7 @@
                 </svg>
               </span>
               <input
+                name="email"
                 type="text"
                 id="design-login-email"
                 class="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
@@ -31,6 +35,7 @@
                 </svg>
               </span>
               <input
+                name="password"
                 type="password"
                 id="design-login-password"
                 class="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
@@ -38,7 +43,7 @@
               />
             </div>
           </div>
-          <button type="submit" class="comp-login2 w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-black shadow-md hover:text-black hover:bg-white focus:outline-none focus:ring-2">
+          <button type="submit" class="btn-login-daftar comp-login2 w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-black shadow-md">
             <span class="w-full"> Masuk </span>
           </button>
         </form>
