@@ -1,0 +1,74 @@
+[
+  {
+    "_id": {
+      "$oid": "5eee651f739f8c674fd736ee"
+    },
+    "name": "Tteokbokki",
+    "image": "mie1.png",
+    "price": "12000",
+    "flavor": "Pedas"
+  },
+  {
+    "_id": {
+      "$oid": "5eee6671a27a66807cf2bea3"
+    },
+    "name": "Mie Ayam",
+    "image": "mie2.png",
+    "price": "14000",
+    "flavor": "Sedang"
+  },
+  {
+    "_id": {
+      "$oid": "5eee6692a27a66807cf2bea4"
+    },
+    "name": "Mie Kuah Daging",
+    "image": "mie3.png",
+    "price": "17000",
+    "flavor": "Pedas"
+  },
+  {
+    "_id": {
+      "$oid": "5eee66a5a27a66807cf2bea5"
+    },
+    "name": "Mie Goreng Aceh",
+    "image": "mie4.png",
+    "price": "15000",
+    "flavor": "Sedang"
+  },
+  {
+    "_id": {
+      "$oid": "5eee66c4a27a66807cf2bea6"
+    },
+    "name": "Mie Goreng",
+    "image": "mie5.png",
+    "price": "10000",
+    "flavor": "Pedas"
+  },
+  {
+    "_id": {
+      "$oid": "5eee66cfa27a66807cf2bea7"
+    },
+    "name": "Mie Kuah Bakso",
+    "image": "mi6.png",
+    "price": "14000",
+    "flavor": "Pedas"
+  },
+  {
+    "_id": {
+      "$oid": "5eee66eea27a66807cf2bea8"
+    },
+    "name": "Mie Yamin Pasta",
+    "image": "mie7.png",
+    "price": "15000",
+    "flavor": "Sedang"
+  },
+  {
+    "_id": {
+      "$oid": "5eee6717a27a66807cf2bea9"
+    },
+    "name": "Mie Kuah",
+    "image": "mie8.png",
+    "price": "10000",
+    "flavor": "Sedang"
+  }
+]

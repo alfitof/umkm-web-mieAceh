@@ -1,4 +1,6 @@
 @import './variable';
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
 
 body {
   font-family: 'Lato', sans-serif;
@@ -21,7 +23,7 @@ nav li a {
 }
 
 .bakso {
-  width: 42%;
+  width: 39%;
 }
 
 .comp-login {
@@ -59,6 +61,9 @@ section .tombol {
   &:hover {
     background: $merah;
     color: $pure;
+  }
+  &:focus {
+    outline: none;
   }
 }
 
@@ -108,4 +113,9 @@ section.cart {
 section.login {
   background: $secondary;
   height: 610px;
+}
+
+.noty_theme__mint {
+  border-radius: 50px !important;
+  padding-left: 8px !important;
 }

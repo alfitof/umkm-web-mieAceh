@@ -13,117 +13,21 @@
 <section class="menu container mx-auto py-8">
   <h1 class="text-xl font-bold mb-8">Semua Menu</h1>
   <div class="grid grid-cols-4 gap-x-12 gap-y-12">
+    <% mies.forEach(function(mie){ %>
     <div class="w-64">
-      <img class="gambar-mie h-40 mb-4 mx-auto" src="/img/mie1.png" alt="mie1" />
+      <img class="gambar-mie h-40 mb-4 mx-auto" src="/img/<%= mie.image%>" alt="mie1" />
       <div class="text-center">
-        <h2 class="mb-4 text-lg">Tteokbokki</h2>
-        <span class="size py-1 px-4 rounded-full uppercase text-xs">pedas/sedang</span>
+        <h2 class="mb-4 text-lg"><%= mie.name%></h2>
+        <span class="size py-1 px-4 rounded-full uppercase text-xs"><%= mie.flavor%></span>
         <div class="flex items-center justify-around mt-6">
-          <span class="font-bold text-lg">Rp.12,000</span>
-          <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+          <span class="font-bold text-lg">Rp. <%= mie.price%></span>
+          <button data-mie="<%= JSON.stringify(mie)%>" class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
             <span>+</span>
             <span class="ml-4">Tambah</span>
           </button>
         </div>
       </div>
     </div>
-    <div class="w-64">
-      <img class="gambar-mie h-40 mb-4 mx-auto" src="/img/mie2.png" alt="mie1" />
-      <div class="text-center">
-        <h2 class="mb-4 text-lg">Mie Ayam</h2>
-        <span class="size py-1 px-4 rounded-full uppercase text-xs">pedas/sedang</span>
-        <div class="flex items-center justify-around mt-6">
-          <span class="font-bold text-lg">Rp.14,000</span>
-          <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-            <span>+</span>
-            <span class="ml-4">Tambah</span>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="w-64">
-      <img class="gambar-mie h-40 mb-4 mx-auto" src="/img/mie3.png" alt="mie1" />
-      <div class="text-center">
-        <h2 class="mb-4 text-lg">Mie Kuah Daging</h2>
-        <span class="size py-1 px-4 rounded-full uppercase text-xs">pedas/sedang</span>
-        <div class="flex items-center justify-around mt-6">
-          <span class="font-bold text-lg">Rp.17,000</span>
-          <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-            <span>+</span>
-            <span class="ml-4">Tambah</span>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="w-64">
-      <img class="gambar-mie h-40 mb-4 mx-auto" src="/img/mie4.png" alt="mie1" />
-      <div class="text-center">
-        <h2 class="mb-4 text-lg">Mie Goreng Aceh</h2>
-        <span class="size py-1 px-4 rounded-full uppercase text-xs">pedas/sedang</span>
-        <div class="flex items-center justify-around mt-6">
-          <span class="font-bold text-lg">Rp.15,000</span>
-          <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-            <span>+</span>
-            <span class="ml-4">Tambah</span>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="w-64">
-      <img class="gambar-mie h-40 mb-4 mx-auto" src="/img/mie5.png" alt="mie1" />
-      <div class="text-center">
-        <h2 class="mb-4 text-lg">Mie Goreng</h2>
-        <span class="size py-1 px-4 rounded-full uppercase text-xs">pedas/sedang</span>
-        <div class="flex items-center justify-around mt-6">
-          <span class="font-bold text-lg">Rp.10,000</span>
-          <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-            <span>+</span>
-            <span class="ml-4">Tambah</span>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="w-64">
-      <img class="gambar-mie h-40 mb-4 mx-auto" src="/img/mie6.png" alt="mie1" />
-      <div class="text-center">
-        <h2 class="mb-4 text-lg">Mie Kuah Bakso</h2>
-        <span class="size py-1 px-4 rounded-full uppercase text-xs">pedas/sedang</span>
-        <div class="flex items-center justify-around mt-6">
-          <span class="font-bold text-lg">Rp.14,000</span>
-          <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-            <span>+</span>
-            <span class="ml-4">Tambah</span>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="w-64">
-      <img class="gambar-mie h-40 mb-4 mx-auto" src="/img/mie7.png" alt="mie1" />
-      <div class="text-center">
-        <h2 class="mb-4 text-lg">Mie Yamin Pasta</h2>
-        <span class="size py-1 px-4 rounded-full uppercase text-xs">asin manis</span>
-        <div class="flex items-center justify-around mt-6">
-          <span class="font-bold text-lg">Rp.15,000</span>
-          <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-            <span>+</span>
-            <span class="ml-4">Tambah</span>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="w-64">
-      <img class="gambar-mie h-40 mb-4 mx-auto" src="/img/mie8.png" alt="mie1" />
-      <div class="text-center">
-        <h2 class="mb-4 text-lg">Mie Kuah</h2>
-        <span class="size py-1 px-4 rounded-full uppercase text-xs">pedas/sedang</span>
-        <div class="flex items-center justify-around mt-6">
-          <span class="font-bold text-lg">Rp.10,000</span>
-          <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-            <span>+</span>
-            <span class="ml-4">Tambah</span>
-          </button>
-        </div>
-      </div>
-    </div>
+    <% }) %>
   </div>
 </section>
