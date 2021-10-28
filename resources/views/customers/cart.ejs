@@ -24,18 +24,21 @@
         <span class="text-lg font-bold">Total pembelian:</span>
         <span class="amount text-2xl font-bold ml-2">Rp. <%= session.cart.totalPrice%></span>
       </div>
+      <% if(user) { %>
       <div>
-        <form action="" class="mt-6">
-          <input type="text" class="border border-gray-400 p-2 w-1/2 mb-4" placeholder="Nomor telepon" />
-          <input type="text" class="border border-gray-400 p-2 w-1/2" placeholder="Alamat Lengkap" />
+        <form action="/orders" method="POST" class="mt-6">
+          <input name="phone" type="text" class="border border-gray-400 p-2 w-1/2 mb-4" placeholder="Nomor telepon" />
+          <input name="address" type="text" class="border border-gray-400 p-2 w-1/2" placeholder="Alamat Lengkap" />
           <div>
             <button class="tombol-cart px-6 py-2 rounded-full text-white font-bold mt-6" type="submit">Pesan sekarang!</button>
           </div>
         </form>
       </div>
+      <% } else { %>
       <div>
-        <!--<a href="" class="tombol-cart inline-block cursor-pointer px-6 py-2 rounded-full text-white font-bold mt-6">Masuk untuk melanjutkan</a>-->
+        <a href="/login" class="tombol-cart inline-block cursor-pointer px-6 py-2 rounded-full text-white font-medium mt-6">Masuk untuk melanjutkan</a>
       </div>
+      <% } %>
     </div>
   </div>
   <% } else {%>
