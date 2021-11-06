@@ -1,4 +1,4 @@
-# introduction
+# Introduction
 I create this UMKM web with mongoDB, expressJS, and nodeJS. The App is Realtime order Mie Aceh and it is a simple web shop that allows users to buy UMKM products with the web. This project is actually a major task for the IT profession course. The purpose of this web app is to simplify the sales process (faster sales) and help UMKM adapt from offline to online stores
 
 ## Images
