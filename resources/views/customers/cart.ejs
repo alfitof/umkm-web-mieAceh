@@ -1,9 +1,9 @@
 <section class="cart py-16">
   <% if (session.cart) { %>
-  <div class="order container mx-auto w-1/2">
-    <div class="flex items-center border-b border-grey-300 pb-4">
+  <div class="order container mx-auto xl:w-1/2">
+    <div class="flex items-center border-b border-white pb-4">
       <img class="cart1" src="/img/cart-black.png" alt="" />
-      <h1 class="cart1 font-bold ml-4 text-2xl">Keranjang saya</h1>
+      <h1 class="cart1 ml-4 text-2xl">Keranjang saya</h1>
     </div>
     <div class="mie-list">
       <% for(let mie of Object.values(session.cart.items)) { %>
@@ -11,26 +11,26 @@
         <img class="w-24" src="/img/<%= mie.item.image%>" alt="" />
         <div class="flex-1 ml-4">
           <h1><%= mie.item.name%></h1>
-          <span><%= mie.item.flavor%></span>
+          <span class="text-white"><%= mie.item.flavor%></span>
         </div>
-        <span class="flex-1"><%= mie.qty%></span>
-        <span class="harga font-bold text-lg">Rp. <%= mie.item.price * mie.qty%></span>
+        <span class="flex-1 text-white"><%= mie.qty%></span>
+        <span class="harga text-lg">Rp. <%= mie.item.price * mie.qty%></span>
       </div>
       <% } %>
     </div>
     <hr />
     <div class="text-right py-4">
       <div>
-        <span class="text-lg font-bold">Total pembelian:</span>
-        <span class="amount text-2xl font-bold ml-2">Rp. <%= session.cart.totalPrice%></span>
+        <span class="text-lg text-white">Total pembelian:</span>
+        <span class="amount text-2xl ml-2">Rp. <%= session.cart.totalPrice%></span>
       </div>
       <% if(user) { %>
       <div>
         <form action="/orders" method="POST" class="mt-6">
-          <input name="phone" type="text" class="border border-gray-400 p-2 w-1/2 mb-4" placeholder="Nomor telepon" />
-          <input name="address" type="text" class="border border-gray-400 p-2 w-1/2" placeholder="Alamat Lengkap" />
+          <input name="phone" type="text" class="border border-white p-2 w-1/2 mb-4" placeholder="Nomor telepon" />
+          <input name="address" type="text" class="border border-white p-2 w-1/2" placeholder="Alamat Lengkap" />
           <div>
-            <button class="tombol-cart px-6 py-2 rounded-full text-white font-bold mt-6" type="submit">Pesan sekarang!</button>
+            <button class="tombol-cart px-6 py-2 rounded-full text-white mt-6" type="submit">Pesan sekarang!</button>
           </div>
         </form>
       </div>
@@ -44,13 +44,13 @@
   <% } else {%>
   <div class="empty-cart">
     <div class="container mx-auto text-center">
-      <h1 class="text-3xl font-bold mb-2">Keranjang Masih Kosong <img class="emoji" src="/img/emoji.png" alt="" /></h1>
-      <p class="text-gray-500 text-lg mb-12">
+      <h1 class="text-3xl mb-2">Keranjang Masih Kosong <img class="emoji" src="/img/emoji.png" alt="" /></h1>
+      <p class="text-white text-lg mb-12">
         Kamu mungkin belum memesan mie.<br />
         Untuk memesan mie, silahkan buka halaman utama.
       </p>
       <img class="w-2/5 mx-auto" src="/img/empty-cart.png" alt="cart" />
-      <a href="/" class="tombol-cart inline-block px-6 py-2 rounded-full text-white font-bold mt-12">Kembali</a>
+      <a href="/" class="tombol-cart inline-block px-6 py-2 rounded-full text-white mt-12">Kembali</a>
     </div>
   </div>
   <% } %>

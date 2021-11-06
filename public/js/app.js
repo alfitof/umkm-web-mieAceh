@@ -2192,7 +2192,7 @@ function initAdmin(socket) {
 
   function generateMarkup(orders) {
     return orders.map(function (order) {
-      return "\n                <tr>\n                    <td class=\"border px-4 py-2 text-green-900\">\n                        <p>".concat(order._id, "</p>\n                        <div>").concat(renderItems(order.items), "</div>\n                    </td>\n                    <td class=\"border px-4 py-2\">").concat(order.customerId.name, "</td>\n                    <td class=\"border px-4 py-2\">").concat(order.address, "</td>\n                    <td class=\"border px-4 py-2\">\n                        <div class=\"inline-block relative w-64\">\n                            <form action=\"/admin/order/status\" method=\"POST\">\n                                <input type=\"hidden\" name=\"orderId\" value=\"").concat(order._id, "\">\n                                <select name=\"status\" onchange=\"this.form.submit()\"\n                                    class=\"block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline\">\n                                    <option value=\"order_placed\"\n                                        ").concat(order.status === 'order_placed' ? 'selected' : '', ">\n                                        Terima Pesanan</option>\n                                    <option value=\"confirmed\" ").concat(order.status === 'confirmed' ? 'selected' : '', ">\n                                        Konfirmasi Pesanan</option>\n                                    <option value=\"prepared\" ").concat(order.status === 'prepared' ? 'selected' : '', ">\n                                        Sajikan Pesanan</option>\n                                    <option value=\"delivered\" ").concat(order.status === 'delivered' ? 'selected' : '', ">\n                                        Antar Pesanan\n                                    </option>\n                                    <option value=\"completed\" ").concat(order.status === 'completed' ? 'selected' : '', ">\n                                        Selesai\n                                    </option>\n                                </select>\n                            </form>\n                            <div\n                                class=\"pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700\">\n                                <svg class=\"fill-current h-4 w-4\" xmlns=\"http://www.w3.org/2000/svg\"\n                                    viewBox=\"0 0 20 20\">\n                                    <path\n                                        d=\"M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z\" />\n                                </svg>\n                            </div>\n                        </div>\n                    </td>\n                    <td class=\"border px-4 py-2\">\n                        ").concat(moment__WEBPACK_IMPORTED_MODULE_1___default()(order.createdAt).format('hh:mm A'), "\n                    </td>\n                    \n                </tr>\n            ");
+      return "\n                <tr>\n                    <td class=\"border px-4 py-2 text-green-800\">\n                        <p>".concat(order._id, "</p>\n                        <div>").concat(renderItems(order.items), "</div>\n                    </td>\n                    <td class=\"border border-white text-white px-4 py-2\">").concat(order.customerId.name, "</td>\n                    <td class=\"border border-white text-white px-4 py-2\">").concat(order.address, "</td>\n                    <td class=\"border border-white text-green-800 px-4 py-2\">\n                        <div class=\"inline-block relative w-64\">\n                            <form action=\"/admin/order/status\" method=\"POST\">\n                                <input type=\"hidden\" name=\"orderId\" value=\"").concat(order._id, "\">\n                                <select name=\"status\" onchange=\"this.form.submit()\"\n                                    class=\"block appearance-none w-full bg-transparent border border-white hover:border-green-800 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline\">\n                                    <option value=\"order_placed\"\n                                        ").concat(order.status === 'order_placed' ? 'selected' : '', ">\n                                        Terima Pesanan</option>\n                                    <option value=\"confirmed\" ").concat(order.status === 'confirmed' ? 'selected' : '', ">\n                                        Konfirmasi Pesanan</option>\n                                    <option value=\"prepared\" ").concat(order.status === 'prepared' ? 'selected' : '', ">\n                                        Sajikan Pesanan</option>\n                                    <option value=\"delivered\" ").concat(order.status === 'delivered' ? 'selected' : '', ">\n                                        Antar Pesanan\n                                    </option>\n                                    <option value=\"completed\" ").concat(order.status === 'completed' ? 'selected' : '', ">\n                                        Selesai\n                                    </option>\n                                </select>\n                            </form>\n                            <div\n                                class=\"pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white\">\n                                <svg class=\"fill-current h-4 w-4\" xmlns=\"http://www.w3.org/2000/svg\"\n                                    viewBox=\"0 0 20 20\">\n                                    <path\n                                        d=\"M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z\" />\n                                </svg>\n                            </div>\n                        </div>\n                    </td>\n                    <td class=\"border px-4 py-2\">\n                        ").concat(moment__WEBPACK_IMPORTED_MODULE_1___default()(order.createdAt).format('hh:mm A'), "\n                    </td>\n                    \n                </tr>\n            ");
     }).join('');
   }
 
@@ -2238,6 +2238,79 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var addToCart = document.querySelectorAll('.add-to-cart');
 var cartCounter = document.querySelector('#cartCounter');
+/*=============== SHOW MENU ===============*/
+
+var navMenu = document.getElementById('nav-menu'),
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close');
+/*===== MENU SHOW =====*/
+
+/* Validate if constant exists */
+
+if (navToggle) {
+  navToggle.addEventListener('click', function () {
+    navMenu.classList.add('show-menu');
+  });
+}
+/*===== MENU HIDDEN =====*/
+
+/* Validate if constant exists */
+
+
+if (navClose) {
+  navClose.addEventListener('click', function () {
+    navMenu.classList.remove('show-menu');
+  });
+}
+/*=============== REMOVE MENU MOBILE ===============*/
+
+
+var navLink = document.querySelectorAll('.nav__link');
+
+function linkAction() {
+  var navMenu = document.getElementById('nav-menu'); // When we click on each nav__link, we remove the show-menu class
+
+  navMenu.classList.remove('show-menu');
+}
+
+navLink.forEach(function (n) {
+  return n.addEventListener('click', linkAction);
+});
+
+function scrollHeader() {
+  var header = document.getElementById('header'); // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+
+  if (this.scrollY >= 50) header.classList.add('scroll-header');else header.classList.remove('scroll-header');
+}
+
+window.addEventListener('scroll', scrollHeader);
+
+function scrollUp() {
+  var scrollUp = document.getElementById('scroll-up'); // When the scroll is higher than 460 viewport height, add the show-scroll class to the a tag with the scroll-top class
+
+  if (this.scrollY >= 460) scrollUp.classList.add('show-scroll');else scrollUp.classList.remove('show-scroll');
+}
+
+window.addEventListener('scroll', scrollUp);
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+
+var sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  delay: 400 // reset: true
+
+});
+sr.reveal(".home, .new-swiper, .newsletter__container");
+sr.reveal(".category__data, .trick__content, .footer__content", {
+  interval: 100
+});
+sr.reveal(".about__data, .discount__img", {
+  origin: 'left'
+});
+sr.reveal(".about__img, .discount__data", {
+  origin: 'right'
+});
 
 function updateCart(mie) {
   axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update-cart', mie).then(function (res) {
@@ -2313,9 +2386,9 @@ if (order) {
 }
 
 var adminAreaPath = window.location.pathname;
-console.log(adminAreaPath);
 
 if (adminAreaPath.includes('admin')) {
+  (0,_admin__WEBPACK_IMPORTED_MODULE_2__.initAdmin)(socket);
   socket.emit('join', 'adminRoom');
 }
 

@@ -1,6 +1,6 @@
-<section class="orders light-section">
-  <div class="container mx-auto pt-12">
-    <h1 class="font-bold text-lg mb-4">Semua Pesanan</h1>
+<section class="orders light-section mt-24">
+  <div class="container mx-auto">
+    <h1 class="text-lg mb-4">Semua Pesanan</h1>
     <% if(messages.success) { %>
     <div id="success-alert" class="flex items-center bg-green-500 text-white text-sm font-semibold px-4 py-3" role="alert">
       <svg
@@ -25,24 +25,24 @@
       <p><%= messages.success%></p>
     </div>
     <% } %>
-    <table class="w-full table-auto bg-white">
+    <table class="w-full table-auto bg-transparent text-white">
       <thead>
         <tr>
-          <th class="px-4 py-2 text-left">Pesanan</th>
-          <th class="px-4 py-2 text-left">No telepon</th>
-          <th class="px-4 py-2 text-left">Alamat</th>
-          <th class="px-4 py-2 text-left">Waktu</th>
+          <th class="px-4 py-2 text-left font-medium">Pesanan</th>
+          <th class="px-4 py-2 text-left font-medium">No telepon</th>
+          <th class="px-4 py-2 text-left font-medium">Alamat</th>
+          <th class="px-4 py-2 text-left font-medium">Waktu</th>
         </tr>
       </thead>
       <tbody>
         <% if(orders.length) { %> <% orders.forEach((order)=> { %>
         <tr>
-          <td class="border px-4 py-2">
+          <td class="border border-white px-4 py-2">
             <a class="link" href="/customer/orders/<%= order._id%>"><%= order._id %></a>
           </td>
-          <td class="border px-4 py-2"><%= order.phone %></td>
-          <td class="border px-4 py-2"><%= order.address %></td>
-          <td class="border px-4 py-2"><%= moment(order.createdAt).format('hh:mm A') %></td>
+          <td class="border border-white px-4 py-2"><%= order.phone %></td>
+          <td class="border border-white px-4 py-2"><%= order.address %></td>
+          <td class="border border-white px-4 py-2"><%= moment(order.createdAt).format('hh:mm A') %></td>
         </tr>
         <% }) %> <% } else { %>
         <tr>

@@ -1,32 +1,74 @@
-<section class="hero">
-  <div class="container mx-auto flex items-center justify-between px-6 py-4">
-    <div class="w-1/2 mb-5 ml-2">
-      <h6 class="text-lg"><em>Apakah kamu lapar?</em></h6>
-      <h1 class="text-6xl font-bold">Gaskeun ajig!</h1>
-      <button class="tombol font-semibold text-white py-2 px-4 rounded-full">Order</button>
+<section class="home container mx-auto" id="home">
+  <div class="home__content grid">
+    <div class="home__group">
+      <img src="/img/hero.png" alt="" class="home__img" />
+      <div class="home__indicator"></div>
+
+      <div class="home__details-img">
+        <h4 class="home__details-title">Mie Aceh</h4>
+        <span class="home__details-subtitle">H. Abdullah</span>
+      </div>
     </div>
-    <div class="bakso">
-      <img src="/img/hero-pizza.png" alt="" />
+
+    <div class="home__data">
+      <h1 class="home__title">Apakah kamu lapar ?</h1>
+      <p class="home__description">
+        Jangan keburu ngiler liatin makanannya ya, hehe.<br />
+        Yuk, cobain aja daripada penasaran
+      </p>
+
+      <div class="home__buttons">
+        <a href="#" class="button">Ayo Order</a>
+      </div>
     </div>
   </div>
 </section>
-<section class="menu container mx-auto py-8">
-  <h1 class="text-xl font-bold mb-8">Semua Menu</h1>
-  <div class="grid grid-cols-4 gap-x-12 gap-y-12">
+<section class="section discount" id="alamat">
+  <div class="discount__container container grid">
+    <div class="discount__data">
+      <h2 class="discount__title">Mie Aceh H. Abdullah berada di</h2>
+      <p>
+        Jln.Eka Suka No.1A Johor Medan<br />
+        +62-815-3523-3797
+      </p>
+    </div>
+
+    <img src="/img/discount-img.png" alt="" class="discount__img" />
+  </div>
+</section>
+<section class="section category" id="best">
+  <h2 class="section__title">Best Seller</h2>
+
+  <div class="category__container container grid">
+    <div class="category__data">
+      <img src="/img/mie5.png" alt="" class="category__img" />
+      <h3 class="category__title">Mie Goreng</h3>
+    </div>
+
+    <div class="category__data">
+      <img src="/img/mie7.png" alt="" class="category__img" />
+      <h3 class="category__title">Mie Yamin Pasta</h3>
+    </div>
+
+    <div class="category__data">
+      <img src="/img/mie2.png" alt="" class="category__img" />
+      <h3 class="category__title">Mie Ayam</h3>
+    </div>
+  </div>
+</section>
+<section class="menu section trick" id="menu">
+  <h2 class="section__title">Semua Menu</h2>
+
+  <div class="trick__container container grid">
     <% mies.forEach(function(mie){ %>
-    <div class="w-64">
-      <img class="gambar-mie h-40 mb-4 mx-auto" src="/img/<%= mie.image%>" alt="mie1" />
-      <div class="text-center">
-        <h2 class="mb-4 text-lg"><%= mie.name%></h2>
-        <span class="size py-1 px-4 rounded-full uppercase text-xs"><%= mie.flavor%></span>
-        <div class="flex items-center justify-around mt-6">
-          <span class="font-bold text-lg">Rp. <%= mie.price%></span>
-          <button data-mie="<%= JSON.stringify(mie)%>" class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
-            <span>+</span>
-            <span class="ml-4">Tambah</span>
-          </button>
-        </div>
-      </div>
+    <div class="trick__content">
+      <img src="/img/<%= mie.image%>" alt="" class="trick__img" />
+      <h3 class="trick__title"><%= mie.name%></h3>
+      <span class="trick__subtitle"><%= mie.flavor%></span>
+      <span class="trick__price">Rp. <%= mie.price%></span>
+      <button data-mie="<%= JSON.stringify(mie)%>" class="add-to-cart button trick__button">
+        <span><i class="bx bx-cart-alt trick__icon"></i></span>
+      </button>
     </div>
     <% }) %>
   </div>
